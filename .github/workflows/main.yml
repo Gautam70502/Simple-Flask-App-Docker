@@ -16,7 +16,7 @@ jobs :
 
     - name: connecting to aws cli
       run: |
-        aws ecr describe-repositories --output table
+        aws ecr describe-repositories --output text
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
