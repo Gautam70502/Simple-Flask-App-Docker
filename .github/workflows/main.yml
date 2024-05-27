@@ -1,1 +1,17 @@
+name : Deploy to ECS
 
+# setting up trigger event
+on : 
+  push :
+    branches : [main]
+  pull_request :
+    branches: [main]
+
+jobs :
+
+  Build-and-push-to-Ecr :
+    runs-on : ubuntu-latest
+    steps : 
+    - uses: actions/checkout@v2
+
+    
